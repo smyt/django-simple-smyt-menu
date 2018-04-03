@@ -1,0 +1,16 @@
+<div id="menu-{{ menu.name }}" class="menu">
+{% for level in levels %}
+  <ul>
+  {% for item in level %}  
+    <li class="{{ item.class }}">
+      {% if 'current' in item.class %}
+        {{ item.name }}
+      {% else %}
+        <a href="{{ item.url }}">{{ item.name }}</a>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endfor %}
+</div>
+<div class='menu-clear'></div>
