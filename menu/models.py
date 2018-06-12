@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.urls import reverse
-from django.core.urlresolvers import resolve
+from django.urls import resolve
 from django.core.validators import URLValidator
 from django.core.exceptions import ValidationError
 from django.urls.exceptions import Resolver404
@@ -13,7 +13,7 @@ from django.urls.exceptions import NoReverseMatch
 class Menu(models.Model):
     ''' Menu '''
     name = models.CharField(max_length=80, help_text='For template')
-    depth = models.IntegerField(default=3, help_text='Maximum nesting level')
+    depth = models.IntegerField(default=3, help_text='Maximum nesting level, used for orm tag only')
 
     class Meta:
         verbose_name = 'menu'

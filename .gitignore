@@ -4,3 +4,5 @@
 *.pyo
 *.egg-info
 dist/
+.cache/
+build/
