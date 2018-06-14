@@ -182,7 +182,6 @@ def draw_sql_menu(context, menu_name):
                                      menu_name])
 
     # RawQuerySet has no methods for non-empty check
-    items = [i for i in items]
     try:
         items = [i for i in items]
     except TypeError:
